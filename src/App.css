@@ -9,3 +9,20 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.Attributes {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+.Mana {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  width: 600px;
+}
