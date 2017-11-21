@@ -39,6 +39,7 @@ class App extends Component {
           />
         <Resources 
         handleResourceButtonClicked={this.handleResourceButtonClicked}
+        mana={this.state.mana}
         />
         <Attributes mana={this.state.mana} className="Attributes"/>
       </div>
