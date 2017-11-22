@@ -3,14 +3,7 @@ import Asset from './Asset'
 
 const Assets = (props) => (
     <div className="Assets">
-        <Asset />
-        <Asset />
-        <Asset />
-        <Asset />
-        <Asset />
-        <Asset />
-        <Asset />
-        <Asset />
+        {props.assets.map((asset) => <Asset name={asset.name} strength={asset.strength}/>)}
     </div>
 )
 

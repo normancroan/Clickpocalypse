@@ -14,7 +14,10 @@ class App extends Component {
     mana: 100,
     manaMultiplier: 1,
     manaMax: 100,
-    assets: []
+    assets: [
+      {name:"generator", strength:5},
+      {name:"generator", strength:8}
+    ]
   }
   componentDidMount(){
     if(this.state.shouldProgressAutomatically){
@@ -60,9 +63,8 @@ class App extends Component {
             />
           </div>
           <div className="Container">
-            <Assets />
-            <Attributes mana={this.state.mana} className="Attributes"/>
-              <Resources 
+            <Assets assets={this.state.assets}/>
+            <Resources 
               handleResourceButtonClicked={this.handleResourceButtonClicked}
               mana={this.state.mana}
               />
