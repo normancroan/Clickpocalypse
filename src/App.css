@@ -26,3 +26,29 @@
   justify-content: space-around;
   width: 600px;
 }
+
+.Power {
+  font-weight: bold;
+  color: white;
+}
+
+.Header {
+  background: #2C3E50;
+  padding: 15px 0;
+  margin-bottom: 10px;
+}
+
+.ResourceButton {
+  border: none;
+  min-width: 75px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: #E67E22;
+  border-bottom: 3px solid #D35400;
+  padding: 5px;
+}
+
+.ResourceButton:disabled {
+  opacity: .5;
+}

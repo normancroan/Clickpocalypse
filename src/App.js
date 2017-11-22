@@ -8,15 +8,17 @@ class App extends Component {
   state = {
     power: 0,
     multiplier: 1,
-    shouldProgressAutomatically: true,
-    mana: 32
+    shouldProgressAutomatically: false,
+    mana: 100,
+    manaMultiplier: 1,
+    manaMax: 100
   }
   componentDidMount(){
     if(this.state.shouldProgressAutomatically){
       setInterval(() => {
         this.setState((prevState) => ({
           power: prevState.power += this.state.multiplier,
-          mana: prevState.mana <= 100 ?  prevState.mana += 1 : prevState.mana
+          mana: prevState.mana <= this.state.manaMax ?  prevState.mana += this.state.manaMultiplier : prevState.mana
         }))
       }, 100)
     }
@@ -28,20 +30,21 @@ class App extends Component {
         mana: prevState.mana - cost
       }))
     }
-
   }
   render() {
     return (
       <div className="App">
-        <Power 
-          power={this.state.power} 
-          multiplier={this.state.multiplier} 
+        <div className="Header">
+          <Power 
+            power={this.state.power} 
+            multiplier={this.state.multiplier} 
+            />
+          </div>
+          <Resources 
+          handleResourceButtonClicked={this.handleResourceButtonClicked}
+          mana={this.state.mana}
           />
-        <Resources 
-        handleResourceButtonClicked={this.handleResourceButtonClicked}
-        mana={this.state.mana}
-        />
-        <Attributes mana={this.state.mana} className="Attributes"/>
+          <Attributes mana={this.state.mana} className="Attributes"/>
       </div>
     );
   }

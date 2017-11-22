@@ -2,7 +2,7 @@ import React from 'react';
 
 const Power = (props) => (
     <div>
-        <p>Power: {props.power} : x{props.multiplier}</p>
+        <h2 className="Power">Power: {props.power}</h2>
     </div>
 )
 
