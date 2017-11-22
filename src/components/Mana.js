@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Mana = (props) => (
-    <div>
+    <div className="ManaBox">
         <progress className="Mana" value={props.mana} max="100"></progress>
     </div>
 )

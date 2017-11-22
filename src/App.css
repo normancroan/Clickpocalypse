@@ -4,19 +4,49 @@
 
 .Resources {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  /*width: 300px;*/
+}
+
+.ResourceButton {
+  border: none;
+  min-width: 75px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: #E67E22;
+  border-bottom: 3px solid #D35400;
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: 1px;
+}
+
+.Container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .Attributes {
   display: flex;
   justify-content: space-between;
-  width: 600px;
+  flex-wrap: wrap;
+  /*width: 300px;*/
   margin-left: auto;
   margin-right: auto;
-  margin-top: 25px;
+  margin-top: 20px;
+}
+
+.Assets {
+  min-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Asset {
+  min-width: 100px;
 }
 
 .Mana {
@@ -24,7 +54,13 @@
   margin-left: auto;
   margin-right: auto;
   justify-content: space-around;
-  width: 600px;
+  /*width: 300px; */
+  width: 300px;
+}
+
+.ManaBox {
+  background-color: orange;
+  margin-bottom: 10px;
 }
 
 .Power {
@@ -38,16 +74,7 @@
   margin-bottom: 10px;
 }
 
-.ResourceButton {
-  border: none;
-  min-width: 75px;
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
-  background-color: #E67E22;
-  border-bottom: 3px solid #D35400;
-  padding: 5px;
-}
+
 
 .ResourceButton:disabled {
   opacity: .5;
