@@ -9,6 +9,12 @@
   /*width: 300px;*/
 }
 
+.ResourcesContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+}
+
 .ResourceButton {
   border: none;
   min-width: 75px;
@@ -20,6 +26,17 @@
   padding: 5px;
   margin-top: 10px;
   margin-left: 1px;
+}
+
+.ResourceButton:disabled {
+  opacity: .5;
+}
+
+.ResourceButton:active {
+  transform: translateY(4px);
+}
+
+.ResourceTier2 {
 }
 
 .Container {
@@ -76,6 +93,3 @@
 
 
 
-.ResourceButton:disabled {
-  opacity: .5;
-}

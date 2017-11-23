@@ -8,6 +8,7 @@ import Assets from './components/Assets'
 class App extends Component {
   state = {
     power: 0,
+    stage: 3,
     multiplier: 1,
     shouldProgressAutomatically: true,
     hasGenerators: false,
@@ -64,7 +65,8 @@ class App extends Component {
           </div>
           <div className="Container">
             <Assets assets={this.state.assets}/>
-            <Resources 
+            <Resources
+              stage={this.state.stage} 
               handleResourceButtonClicked={this.handleResourceButtonClicked}
               mana={this.state.mana}
               />
